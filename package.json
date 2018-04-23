@@ -18,9 +18,11 @@
   },
   "homepage": "https://github.com/riojack/insurance-ui#readme",
   "devDependencies": {
+    "@types/express": "^4.11.1",
+    "express": "^4.16.3",
     "ts-loader": "^4.2.0",
     "typescript": "^2.8.3",
-    "webpack": "^4.6.0",
-    "webpack-cli": "^2.0.15"
+    "webpack-cli": "^2.0.15",
+    "webpack": "^4.6.0"
   }
 }
