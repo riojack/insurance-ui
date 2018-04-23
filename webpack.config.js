@@ -9,6 +9,10 @@ module.exports = {
       test: /\.tsx?$/,
       use: 'ts-loader',
       exclude: /node_modules/
+    }, {
+      test: /\.css$|\.scss$/,
+      use: ['style-loader', 'css-loader', 'sass-loader'],
+      exclude: /node_modules/
     }]
   },
   resolve: {
@@ -21,8 +25,7 @@ module.exports = {
   optimization: {
     minimizer: [new UglifyJsPlugin({
       cache: true,
-      parallel: true,
-      sourceMap: true // set to true if you want JS source maps
+      parallel: true
     })]
   }
 };
