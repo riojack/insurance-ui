@@ -2,7 +2,7 @@ const path = require('path'),
   UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.ts',
+  entry: './app/index.ts',
   devtool: 'inline-source-map',
   module: {
     rules: [{
