@@ -1,8 +1,8 @@
 function seeSpotRun(doc: Document) {
-  const h2: HTMLHeadingElement = doc.createElement('h2');
-  h2.innerHTML = 'See spot run';
+  const h1: HTMLHeadingElement = doc.createElement('h1');
+  h1.innerHTML = 'Hipster Insurance';
   
-  doc.body.appendChild(h2);
+  doc.body.appendChild(h1);
 }
 
 seeSpotRun(document);
