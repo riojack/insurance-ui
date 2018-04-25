@@ -5,3 +5,7 @@ insert_final_newline = true
 [*.{ts,tsx,js,jsx,css,scss,html,mustache,json}]
 indent_style = space
 indent_size = 2
+
+[.babelrc]
+indent_style = space
+indent_size = 2

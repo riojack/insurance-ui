@@ -1,8 +1,8 @@
 function seeSpotRun(doc: Document) {
-  const h1: HTMLHeadingElement = doc.createElement('h1');
-  h1.innerHTML = 'Hipster Insurance';
-  
-  doc.body.appendChild(h1);
+  const mountElement = doc.createElement('div');
+  mountElement.innerHTML = 'This is the mount element.  Hooray!  Mount yer React code here.';
+
+  doc.body.appendChild(mountElement);
 }
 
 seeSpotRun(document);
