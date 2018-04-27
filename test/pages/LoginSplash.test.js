@@ -12,4 +12,13 @@ describe('Login Splash Page', () => {
     expect(emailField).toHaveLength(1);
     expect(passwordField).toHaveLength(1);
   });
+
+  it('should have a button with the words "Login"', () => {
+    let splash = enzyme.shallow(<LoginSplash />);
+
+    let loginButton = splash.find('button');
+
+    expect(loginButton).toHaveLength(1);
+    expect(loginButton.text()).toEqual('Login');
+  });
 });

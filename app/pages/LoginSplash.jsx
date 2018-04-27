@@ -9,6 +9,7 @@ export default class LoginSplash extends React.Component {
     return <div class="login-form">
       <input type="email" placeholder="E-mail" />
       <input type="password" placeholder="Password" />
+      <button>Login</button>
     </div>;
   }
 }
