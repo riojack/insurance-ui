@@ -1,7 +1,10 @@
-import * as React from 'react'
+import * as React from 'react';
 
 export default class LoginSplash extends React.Component {
   render() {
-    return <p></p>;
+    return <div>
+      <input type="email" />
+      <input type="password" />
+    </div>;
   }
 }
