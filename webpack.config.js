@@ -15,7 +15,19 @@ module.exports = {
       },
       {
         test: /\.css$|\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [{
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              minimize: true
+            }
+          },
+          {
+            loader: 'sass-loader'
+          }
+        ],
         exclude: /node_modules/
       }
     ]
