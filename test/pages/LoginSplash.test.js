@@ -13,7 +13,7 @@ describe('Login Splash Page', () => {
     expect(passwordField).toHaveLength(1);
   });
 
-  it('should have a button with the words "Login"', () => {
+  it('should have a button with the word "Login"', () => {
     let splash = enzyme.shallow(<LoginSplash />);
 
     let loginButton = splash.find('button');
