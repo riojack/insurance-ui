@@ -1,4 +1,4 @@
-import tryLogin from "../../app/actions/login";
+import tryLogin from "../../../app/actions/login";
 
 describe('Login action', () => {
   it('should create an action with type "TRY_LOGIN" and also includes the username and password', () => {

@@ -1,5 +1,5 @@
 import * as enzyme from 'enzyme';
-import LoginSplash from '../../app/pages/LoginSplash';
+import LoginSplash from '../../../app/pages/LoginSplash';
 import * as React from 'react'
 
 describe('Login Splash Page', () => {

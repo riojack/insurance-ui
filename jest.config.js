@@ -6,6 +6,6 @@ module.exports = {
     '\\.(css|scss)$': '<rootDir>/scss-stub.js'
   },
   moduleFileExtensions: ['jsx', 'js'],
-  testMatch: ['**/test/**/*.+(js)'],
+  testMatch: ['**/test/unit/**/*.+(js)'],
   verbose: true
 };
