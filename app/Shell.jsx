@@ -4,10 +4,6 @@ import AppStore from './stores/app-store';
 import { LoginSplash } from './pages/LoginSplash';
 import { Dashboard } from './pages/Dashboard';
 
-// function showDashboardIfLoggedIn(store) {
-//   if (store.getState().logged_in) {}
-// }
-
 function showLoginIfLoggedOut(store) {
   if (!store.getState().logged_in) {
     return <LoginSplash />;
