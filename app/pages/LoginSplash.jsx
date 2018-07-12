@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { connect } from 'react-redux';
 import tryLogin from '../actions/login';
 
 class LoginSplashComponent extends React.Component {
@@ -32,6 +33,13 @@ class LoginSplashComponent extends React.Component {
   }
 }
 
-export {
-  LoginSplashComponent
+const mapStateToProps = () => { return {}; };
+const mapDispatchToProps = dispatch => {
+  return {
+    handleLogin: (username, password) => dispatch( tryLogin(username, password) )
+  };
 };
+
+const LoginSplash = connect(mapStateToProps, mapDispatchToProps)(LoginSplashComponent);
+
+export {LoginSplash, LoginSplashComponent}
