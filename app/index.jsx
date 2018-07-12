@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import {BrowserRouter} from 'react-router-dom';
-import LoginSplash from './pages/LoginSplash.jsx';
+import Shell from './Shell';
 
 function seeSpotRun(doc) {
   const mountElement = doc.createElement('div');
@@ -9,9 +8,7 @@ function seeSpotRun(doc) {
 
   doc.body.appendChild(mountElement);
 
-  ReactDOM.render((<BrowserRouter>
-    <LoginSplash></LoginSplash>
-  </BrowserRouter>), mountElement);
+  ReactDOM.render(<Shell></Shell>, mountElement);
 }
 
 seeSpotRun(document);
