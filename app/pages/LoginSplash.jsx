@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import tryLogin from '../actions/login';
+import { tryLogin } from '../actions/login';
 
 class LoginSplashComponent extends React.Component {
   constructor(props) {

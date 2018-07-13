@@ -1,5 +1,7 @@
 import appReducer from '../../../app/reducers/app-reducer';
-import {tryLogin} from '../../../app/actions/login';
+import {
+  tryLogin
+} from '../../../app/actions/login';
 
 describe('App Reducer', () => {
   it('should not be logged in in the default state', () => {

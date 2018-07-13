@@ -3,7 +3,9 @@ import * as React from 'react'
 import Shell from '../../app/Shell';
 import { LoginSplash } from '../../app/pages/LoginSplash';
 import AppStore from '../../app/stores/app-store';
-import {tryLogin} from '../../app/actions/login';
+import {
+  tryLogin
+} from '../../app/actions/login';
 import { Dashboard } from '../../app/pages/Dashboard';
 
 describe('Shell', () => {

@@ -1,5 +1,7 @@
 import AppStore from "../../../app/stores/app-store";
-import {tryLogin} from "../../../app/actions/login";
+import {
+  tryLogin
+} from "../../../app/actions/login";
 
 describe('App Store', () => {
   it('should update the logged in state', (done) => {

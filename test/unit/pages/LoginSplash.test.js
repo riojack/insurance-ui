@@ -1,7 +1,6 @@
 import * as enzyme from 'enzyme';
 import {LoginSplashComponent} from '../../../app/pages/LoginSplash';
 import * as React from 'react'
-import tryLogin from '../../../app/actions/login';
 
 describe('Login Splash Page', () => {
   it('should have an email field and password field', () => {
