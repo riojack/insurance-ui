@@ -1,5 +1,6 @@
 import {
-  getStore, destroyStore
+  getStore,
+  destroyStore
 } from "../../../app/stores/app-store";
 import {
   tryLogin
