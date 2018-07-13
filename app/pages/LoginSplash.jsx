@@ -5,7 +5,7 @@ import tryLogin from '../actions/login';
 class LoginSplashComponent extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {username: '', password: ''};
+    this.state = { username: '', password: '' };
   }
 
   componentDidMount() {
@@ -25,7 +25,7 @@ class LoginSplashComponent extends React.Component {
   }
 
   render() {
-    return <div class="login-form">
+    return <div className="login-form">
       <input type="email" placeholder="E-mail" onChange={this.captureEmail.bind(this)} />
       <input type="password" placeholder="Password" onChange={this.capturePassword.bind(this)} />
       <button onClick={this.triggerLogin.bind(this)}>Login</button>
@@ -36,10 +36,12 @@ class LoginSplashComponent extends React.Component {
 const mapStateToProps = () => { return {}; };
 const mapDispatchToProps = dispatch => {
   return {
-    handleLogin: (username, password) => dispatch( tryLogin(username, password) )
+    handleLogin: (username, password) => {
+      dispatch(tryLogin(username, password));
+    }
   };
 };
 
 const LoginSplash = connect(mapStateToProps, mapDispatchToProps)(LoginSplashComponent);
 
-export {LoginSplash, LoginSplashComponent}
+export { LoginSplash, LoginSplashComponent }
