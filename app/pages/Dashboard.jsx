@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 class DashboardComponent extends React.Component {
   render() {
-    return <div>Dashboard</div>
+    return <div><button>Log out</button></div>
   }
 }
 
