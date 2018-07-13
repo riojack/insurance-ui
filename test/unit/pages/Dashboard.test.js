@@ -11,4 +11,15 @@ describe('Dashboard Page', () => {
     expect(logoutButton).toHaveLength(1);
     expect(logoutButton.text()).toEqual('Log out');
   });
+
+  it('should trigger props.handleLogout when the "Log out" button is clicked', () => {
+    const handleLogoutStub = jest.fn();
+    let dashboard = enzyme.shallow(<DashboardComponent handleLogout={handleLogoutStub} />);
+
+    let logoutButton = dashboard.find('button');
+
+    logoutButton.simulate('click');
+
+    expect(handleLogoutStub).toHaveBeenCalled();
+  });
 });
