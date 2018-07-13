@@ -23,7 +23,7 @@ describe('Login', () => {
     });
 
     it('should have a "Logout" button that exits back to the login form', () => {
-      cy.contains('Log out').click();
+      cy.get('button').contains('Log out').click();
 
       cy.get('input[placeholder="E-mail"]').should('be.visible');
       cy.get('input[type="Password"]').should('be.visible');

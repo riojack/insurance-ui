@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
+import { logout } from '../actions/login';
 
 class DashboardComponent extends React.Component {
   triggerLogout() {
@@ -12,9 +13,11 @@ class DashboardComponent extends React.Component {
 }
 
 const mapStateToProps = () => { return {}; };
-const mapDispatchToProps = () => {
+const mapDispatchToProps = dispatch => {
   return {
-    handleLogout: () => { }
+    handleLogout: () => {
+      dispatch(logout());
+    }
   };
 };
 
