@@ -12,6 +12,11 @@ function getStore() {
   return applicationStore;
 }
 
+function destroyStore() {
+  applicationStore = null;
+}
+
 export {
-  getStore
+  getStore,
+  destroyStore
 };

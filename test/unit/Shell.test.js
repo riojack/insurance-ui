@@ -5,7 +5,8 @@ import {
   LoginSplash
 } from '../../app/pages/LoginSplash';
 import {
-  getStore
+  getStore,
+  destroyStore
 } from '../../app/stores/app-store';
 import {
   tryLogin
@@ -15,6 +16,8 @@ import {
 } from '../../app/pages/Dashboard';
 
 describe('Shell', () => {
+  afterEach(() => destroyStore);
+
   it('should show the LoginSplash component when the user is not logged in', () => {
     let shell = enzyme.shallow( < Shell / > );
 
