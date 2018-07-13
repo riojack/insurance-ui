@@ -1,6 +1,17 @@
-import { createStore } from 'redux';
+import {
+  createStore
+} from 'redux';
 import appReducer from '../reducers/app-reducer';
 
-const AppStore = createStore(appReducer);
+let applicationStore;
 
-export default AppStore;
+function getStore() {
+  if (!applicationStore) {
+    applicationStore = createStore(appReducer);
+  }
+  return applicationStore;
+}
+
+export {
+  getStore
+};

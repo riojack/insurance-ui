@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import Shell from './Shell';
-import AppStore from './stores/app-store';
+import { getStore } from './stores/app-store';
 
 function shouldCreateNewContainer(doc) {
   return doc.querySelectorAll('#awesome').length === 0;
@@ -22,11 +22,11 @@ function seeSpotRun(doc) {
 }
 
 let isLoggedIn = false;
-AppStore.subscribe((() => {
-  if (AppStore.getState().logged_in && !isLoggedIn) {
+getStore().subscribe((() => {
+  if (getStore().getState().logged_in && !isLoggedIn) {
     seeSpotRun(document);
     isLoggedIn = true;
-  } else if (!AppStore.getState().logged_in && isLoggedIn) {
+  } else if (!getStore().getState().logged_in && isLoggedIn) {
     seeSpotRun(document);
     isLoggedIn = false;
   }

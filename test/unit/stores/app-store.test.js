@@ -1,12 +1,21 @@
-import AppStore from "../../../app/stores/app-store";
+import {
+  getStore
+} from "../../../app/stores/app-store";
 import {
   tryLogin
 } from "../../../app/actions/login";
 
-describe('App Store', () => {
+describe('Application store', () => {
+  it('should always return the same store', () => {
+    const store = getStore();
+
+    expect(store).toBeDefined();
+    expect(getStore()).toBe(store);
+  });
+
   it('should update the logged in state', (done) => {
-    const unsub = AppStore.subscribe(() => {
-      const state = AppStore.getState();
+    const unsub = getStore().subscribe(() => {
+      const state = getStore().getState();
 
       expect(state).toHaveProperty('logged_in', true);
 
@@ -14,6 +23,6 @@ describe('App Store', () => {
       done();
     });
 
-    AppStore.dispatch(tryLogin('floopy', 'boopy'));
+    getStore().dispatch(tryLogin('floopy', 'boopy'));
   });
 });

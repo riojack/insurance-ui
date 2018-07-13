@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Provider } from 'react-redux';
-import AppStore from './stores/app-store';
+import { getStore } from './stores/app-store';
 import { LoginSplash } from './pages/LoginSplash';
 import { Dashboard } from './pages/Dashboard';
 
@@ -12,7 +12,7 @@ function showLoginIfLoggedOut(store) {
 }
 
 export default function Shell() {
-  return (<Provider store={AppStore}>
-    {showLoginIfLoggedOut(AppStore)}
+  return (<Provider store={getStore()}>
+    {showLoginIfLoggedOut(getStore())}
   </Provider>);
 }
